@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_28_212918) do
+ActiveRecord::Schema.define(version: 2019_10_28_214358) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
@@ -21,6 +21,28 @@ ActiveRecord::Schema.define(version: 2019_10_28_212918) do
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
+  end
+
+  create_table "installations", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "credit"
+    t.string "copyright"
+    t.string "slug"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_installations_on_slug", unique: true
+  end
+
+  create_table "sculptures", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "credit"
+    t.string "copyright"
+    t.string "slug"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_sculptures_on_slug", unique: true
   end
 
   create_table "users", force: :cascade do |t|
