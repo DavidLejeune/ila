@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2019_10_28_214358) do
     t.index ["slug"], name: "index_installations_on_slug", unique: true
   end
 
-<<<<<<< HEAD
   create_table "sculptures", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -46,8 +45,6 @@ ActiveRecord::Schema.define(version: 2019_10_28_214358) do
     t.index ["slug"], name: "index_sculptures_on_slug", unique: true
   end
 
-=======
->>>>>>> 343e31c6a85fa58ef8601b1b255e0968381e9a4f
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "slug"
