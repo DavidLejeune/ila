@@ -69,6 +69,6 @@ class SculpturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sculpture_params
-      params.require(:sculpture).permit(:title, :description, :credit, :copyright, :slug)
+      params.require(:sculpture).permit(:title, :description, :credit, :copyright)
     end
 end
