@@ -69,6 +69,6 @@ class InstallationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def installation_params
-      params.require(:installation).permit(:title, :description, :credit, :copyright, :slu)
+      params.require(:installation).permit(:title, :description, :credit, :copyright, :slug)
     end
 end

@@ -17,7 +17,7 @@ class InstallationsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create installation" do
     assert_difference('Installation.count') do
-      post installations_url, params: { installation: { copyright: @installation.copyright, credit: @installation.credit, description: @installation.description, slu: @installation.slu, title: @installation.title } }
+      post installations_url, params: { installation: { copyright: @installation.copyright, credit: @installation.credit, description: @installation.description, slug: @installation.slug, title: @installation.title } }
     end
 
     assert_redirected_to installation_url(Installation.last)
@@ -34,7 +34,7 @@ class InstallationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update installation" do
-    patch installation_url(@installation), params: { installation: { copyright: @installation.copyright, credit: @installation.credit, description: @installation.description, slu: @installation.slu, title: @installation.title } }
+    patch installation_url(@installation), params: { installation: { copyright: @installation.copyright, credit: @installation.credit, description: @installation.description, slug: @installation.slug, title: @installation.title } }
     assert_redirected_to installation_url(@installation)
   end
 

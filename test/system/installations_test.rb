@@ -17,7 +17,7 @@ class InstallationsTest < ApplicationSystemTestCase
     fill_in "Copyright", with: @installation.copyright
     fill_in "Credit", with: @installation.credit
     fill_in "Description", with: @installation.description
-    fill_in "Slu", with: @installation.slu
+    fill_in "Slug", with: @installation.slug
     fill_in "Title", with: @installation.title
     click_on "Create Installation"
 
@@ -32,7 +32,7 @@ class InstallationsTest < ApplicationSystemTestCase
     fill_in "Copyright", with: @installation.copyright
     fill_in "Credit", with: @installation.credit
     fill_in "Description", with: @installation.description
-    fill_in "Slu", with: @installation.slu
+    fill_in "Slug", with: @installation.slug
     fill_in "Title", with: @installation.title
     click_on "Update Installation"
 

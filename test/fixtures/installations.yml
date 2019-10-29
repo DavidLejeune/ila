@@ -5,11 +5,11 @@ one:
   description: MyText
   credit: MyString
   copyright: MyString
-  slu: MyString
+  slug: MyString
 
 two:
   title: MyString
   description: MyText
   credit: MyString
   copyright: MyString
-  slu: MyString
+  slug: MyString

@@ -5,10 +5,10 @@ class CreateInstallations < ActiveRecord::Migration[6.0]
       t.text :description
       t.string :credit
       t.string :copyright
-      t.string :slu
+      t.string :slug
 
       t.timestamps
     end
-    add_index :installations, :slu, unique: true
+    add_index :installations, :slug, unique: true
   end
 end
