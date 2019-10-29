@@ -12,16 +12,17 @@
   </head>
 
   <body>
+  <br>
 	<div id="sidebar">
 		<div id="logo">
 			<%= link_to root_path do %>
-				<%= image_tag "logo.svg" %>
+				<%= image_tag "logo.png" %>
 			<% end %>
 		</div>
 
 		<ul>
 			<li class="category">Website</li>
-			<li><%= link_to "Sculptures", root_path %></li>
+			<li><%= link_to "Installations", root_path %></li>
 			<li><%= link_to "About", about_path %></li>
 		</ul>
 
@@ -48,7 +49,10 @@
 			<% end %>
 
 
-
+				<div class="buttons">
+					<button class="button"><%= link_to "New Installation", new_installation_path %></button>
+					<button class="button">Log Out</button>
+				</div>
 
 
 		</div>
