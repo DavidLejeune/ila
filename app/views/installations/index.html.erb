@@ -38,9 +38,8 @@
 
 
 <% @installations.each do |installation| %>
-  <div class="installations_wrapper">
+  <div class="installation_wrapper">
       <h2 class="title"><%= link_to installation.title, installation %></h2>
-      <p class="date"><%= installation.created_at.strftime("%B %d, %Y") %></p>
       <p class="date"><%= installation.description %></p>
       <p class="date"><%= installation.credit %></p>
       <p class="date"><%= installation.copyright %></p>
