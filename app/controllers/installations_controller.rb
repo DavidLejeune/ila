@@ -4,7 +4,9 @@ class InstallationsController < ApplicationController
   # GET /installations
   # GET /installations.json
   def index
-    @installations = Installation.all
+    #@installations = Installation.all
+    #this is going to reverse the installation order
+    @installations = Installation.all.order('created_at DESC')
   end
 
   # GET /installations/1
