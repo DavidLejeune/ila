@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @installation.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @installation.description %>
+</p>
+
+<p>
+  <strong>Credit:</strong>
+  <%= @installation.credit %>
+</p>
+
+<p>
+  <strong>Copyright:</strong>
+  <%= @installation.copyright %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @installation.comment %>
+</p>
+
+<%= link_to 'Edit', edit_installation_path(@installation) %> |
+<%= link_to 'Back', installations_path %>
