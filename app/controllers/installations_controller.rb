@@ -1,5 +1,6 @@
 class InstallationsController < ApplicationController
   before_action :set_installation, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:show, index]
 
   # GET /installations
   # GET /installations.json
