@@ -25,5 +25,10 @@
   <%= @installation.comment %>
 </p>
 
+<p>
+  <strong>Date:</strong>
+  Submitted <%= time_ago_in_words(@installation.created_at) %> ago.
+</p>
+
 <%= link_to 'Edit', edit_installation_path(@installation) %> |
 <%= link_to 'Back', installations_path %>
