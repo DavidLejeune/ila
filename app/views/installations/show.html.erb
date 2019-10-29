@@ -1,34 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div id="installation_content">
 
-<p>
-  <strong>Title:</strong>
-  <%= @installation.title %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @installation.description %>
-</p>
+  <p class="title">
+    <strong>Title:</strong>
+    <%= @installation.title %>
+  </p>
 
-<p>
-  <strong>Credit:</strong>
-  <%= @installation.credit %>
-</p>
+  <p class="description">
+    <strong>Description:</strong>
+    <%= @installation.description %>
+  </p>
 
-<p>
-  <strong>Copyright:</strong>
-  <%= @installation.copyright %>
-</p>
+  <p class="credit">
+    <strong>Credit:</strong>
+    <%= @installation.credit %>
+  </p>
 
-<p>
-  <strong>Comment:</strong>
-  <%= @installation.comment %>
-</p>
+  <p class="copyright">
+    <strong>Copyright:</strong>
+    <%= @installation.copyright %>
+  </p>
 
-<p>
-  <strong>Date:</strong>
-  Submitted <%= time_ago_in_words(@installation.created_at) %> ago.
-</p>
+  <p class="comments">
+    <strong>Comment:</strong>
+    <%= @installation.comment %>
+  </p>
 
-<%= link_to 'Edit', edit_installation_path(@installation) %> |
-<%= link_to 'Back', installations_path %>
+  <p class="date">
+    <strong>Date:</strong>
+    Submitted <%= time_ago_in_words(@installation.created_at) %> ago.
+  </p>
+
+  <%= link_to 'Edit', edit_installation_path(@installation) %> |
+  <%= link_to 'Back', installations_path %>
+
+
+
+
+
+
+</div>

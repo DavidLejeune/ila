@@ -148,7 +148,7 @@ a {
 			margin: .5em 0 0 0;
 		}
 	}
-	#post_content {
+	#installation_content {
 		padding: 1em 3em;
 		.title {
 			font-weight: 500;
@@ -160,6 +160,22 @@ a {
 		.body {
 			font-size: 1.1em;
 			line-height: 1.75;
+			color: #2a2f35;
+		}
+		.description {
+			font-size: 1.1em;
+			line-height: 1.75;
+			color: #510cd3;
+		}
+		.credit {
+			font-size: 1.1em;
+			line-height: 1.75;
+			color: #cf9242;
+		}
+		.copyright {
+			font-size: 1.1em;
+			line-height: 1.75;
+			color: #6b5d1d;
 		}
 		.date_and_author {
 			color: #9eafba;
