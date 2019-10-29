@@ -22,7 +22,8 @@
 
 		<ul>
 			<li class="category">Website</li>
-			<li><%= link_to "Installations", root_path %></li>
+			<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "Installations", installations_path %></li>
 			<li><%= link_to "About", about_path %></li>
 		</ul>
 
@@ -41,6 +42,8 @@
 	<div id="main_content">
 		<div id="header">
 			<% if current_page?(root_path) %>
+				<p>Congratulations, you made it to my website</p>
+			<% elsif current_page?(installations_path) %>
 				<p>All Installations</p>
 			<% elsif current_page?(about_path) %>
 				<p>About</p>
