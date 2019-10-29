@@ -1,0 +1,37 @@
+<%= form_with(model: sculpture, local: true) do |form| %>
+  <% if sculpture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sculpture.errors.count, "error") %> prohibited this sculpture from being saved:</h2>
+
+      <ul>
+        <% sculpture.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :credit %>
+    <%= form.text_field :credit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :copyright %>
+    <%= form.text_field :copyright %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
