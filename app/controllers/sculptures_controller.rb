@@ -1,5 +1,6 @@
 class SculpturesController < ApplicationController
   before_action :set_sculpture, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:show, :index]
 
   # GET /sculptures
   # GET /sculptures.json
