@@ -1,2 +1,0 @@
-class Sculpture < ApplicationRecord
-end
