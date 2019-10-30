@@ -33,7 +33,8 @@
   </p>
 
   <%= link_to 'Edit', edit_installation_path(@installation) %> |
-  <%= link_to 'Back', installations_path %>
+  <%= link_to 'Back', installations_path %> |
+  <%= link_to 'Delete', installation_path(@installation), method: :delete, data: { confirm: 'Are you sure?' } %>
 
 
 

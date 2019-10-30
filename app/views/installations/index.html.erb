@@ -44,6 +44,9 @@
       <p class="date"><%= installation.credit %></p>
       <p class="date"><%= installation.copyright %></p>
       <p class="date"><%= installation.created_at.strftime("%B %d, %Y") %></p>
+
+            <p><%= link_to 'Show', installation %> | <%= link_to 'Edit', edit_installation_path(installation) %> |
+            <%= link_to 'Destroy', installation, method: :delete, data: { confirm: 'Are you sure?' } %></p>
   </div>
   <br>
 <% end %>
