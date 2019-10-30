@@ -10,16 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_29_200013) do
+ActiveRecord::Schema.define(version: 2019_10_30_004828) do
+
+  create_table "comments", force: :cascade do |t|
+    t.string "name"
+    t.text "body"
+    t.integer "installation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["installation_id"], name: "index_comments_on_installation_id"
+  end
 
   create_table "installations", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "credit"
     t.string "copyright"
-    t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "comments", "installations"
 end
