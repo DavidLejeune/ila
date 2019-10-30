@@ -31,7 +31,15 @@
   <%= link_to 'Back', installations_path %> |
   <%= link_to 'Delete', installation_path(@installation), method: :delete, data: { confirm: 'Are you sure?' } %>
 
+	<p class="body"><%= @installation.description %></p>
 
+	<div id="comments">
+		<h2><%= @installation.comments.count %> Comments</h2>
+		<%= render @installation.comments %>
+
+		<h3>Add a comment:</h3>
+		<%= render "comments/form" %>
+	</div>
 
 
 
