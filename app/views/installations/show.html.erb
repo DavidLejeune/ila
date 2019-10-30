@@ -26,11 +26,13 @@
     <strong>Date:</strong>
     Submitted <%= time_ago_in_words(@installation.created_at) %> ago.
   </p>
-
-  <%= link_to 'Edit', edit_installation_path(@installation) %> |
-  <%= link_to 'Back', installations_path %> |
-  <%= link_to 'Delete', installation_path(@installation), method: :delete, data: { confirm: 'Are you sure?' } %>
-
+		
+    
+  <% if user_signed_in? %>
+    <%= link_to 'Edit', edit_installation_path(@installation) %> |
+    <%= link_to 'Back', installations_path %> |
+    <%= link_to 'Delete', installation_path(@installation), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 	
 
 	<div id="comments">
