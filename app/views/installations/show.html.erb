@@ -9,7 +9,7 @@
 
   <p class="show_image">
     <strong>Image:</strong>
-    <%= image_tag (@installation.image), style: 'height:200px; width:auto'  %>
+    <%= image_tag (@installation.image), style: 'height:200px; width:auto' %>
   </p>
 
   <p class="description">
@@ -39,16 +39,22 @@
     <%= link_to 'Delete', installation_path(@installation), method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 	
+<% if @installation.comments.count > 0 %>
 
 	<div id="comments">
-		<h2><%= @installation.comments.count %> Comments</h2>
+    <% if @installation.comments.count == 1 %>
+      <h2><%= @installation.comments.count %> Addendum</h2>
+    <% else %>
+      <h2><%= @installation.comments.count %> Addenda</h2>
+    <% end %>
 		<%= render @installation.comments %>
+  <% end %>
     <% if user_signed_in? %>
 		  <h3>Add a comment:</h3>
 		  <%= render "comments/form" %>
     <% end %>
 	</div>
- 
+
 
 
 
