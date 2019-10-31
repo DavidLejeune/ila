@@ -40,6 +40,7 @@
 <% @installations.each do |installation| %>
   <div class="installation_wrapper">
       <h2 class="title"><%= link_to installation.title, installation %></h2>
+            <td><%= image_tag (installation.image), style: 'height:60px; width:auto'  %></td>
       <p class="date"><%= installation.description %></p>
       <p class="date"><%= installation.credit %></p>
       <p class="date"><%= installation.copyright %></p>
@@ -57,3 +58,4 @@
 
   <%= link_to 'New Installation', new_installation_path %>
 
+ 
