@@ -59,4 +59,5 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa) }
 server '167.172.138.190', user: 'gingerbird', roles: %w{app db web}
