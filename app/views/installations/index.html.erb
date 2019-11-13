@@ -43,7 +43,7 @@
       <td><%= image_tag (installation.image), style: 'height:60px; width:auto'  %></td>
       <p class="date"><%= installation.description %></p>
       <p class="date"><%= installation.credit %></p>
-      <p class="date"><%= installation.copyright %></p>
+      <p class="copyright"><%= installation.copyright %></p>
       <p class="date"><%= installation.created_at.strftime("%B %d, %Y") %></p>
 <% if user_signed_in? %>
             <p><%= link_to 'Show', installation %> | <%= link_to 'Edit', edit_installation_path(installation) %> |
