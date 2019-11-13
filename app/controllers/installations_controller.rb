@@ -4,7 +4,9 @@ class InstallationsController < ApplicationController
   # GET /installations
   # GET /installations.json
   def index
-    @installations = Installation.all
+    #@installations = Installation.all
+    #this is going to reverse the installation order
+    @installations = Installation.all.order('created_at DESC')
   end
 
   # GET /installations/1
@@ -69,6 +71,6 @@ class InstallationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def installation_params
-      params.require(:installation).permit(:title, :description, :credit, :copyright)
+      params.require(:installation).permit(:title, :description, :credit, :copyright, :comment, :image)
     end
 end

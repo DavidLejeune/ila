@@ -33,11 +33,19 @@
   </p>
 		
     
-  <% if user_signed_in? %>
+  <%
+=begin%>
+ <% if user_signed_in? %> 
+<%
+=end%>
     <%= link_to 'Edit', edit_installation_path(@installation) %> |
     <%= link_to 'Back', installations_path %> |
     <%= link_to 'Delete', installation_path(@installation), method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
+  <%
+=begin%>
+ <% end %> 
+<%
+=end%>
 	
 <% if @installation.comments.count > 0 %>
 
@@ -49,10 +57,18 @@
     <% end %>
 		<%= render @installation.comments %>
   <% end %>
-    <% if user_signed_in? %>
+    <%
+=begin%>
+ <% if user_signed_in? %> 
+<%
+=end%>
 		  <h3>Add a comment:</h3>
 		  <%= render "comments/form" %>
-    <% end %>
+    <%
+=begin%>
+ <% end %> 
+<%
+=end%>
 	</div>
 
 
