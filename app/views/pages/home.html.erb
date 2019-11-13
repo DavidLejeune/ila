@@ -1,1 +1,6 @@
-<h1>Welcome</h1>
+			<% if user_signed_in? %>
+                    <h1>Welcome <%= current_user.email %> </h1>
+                    <h2>You have admin rights, use them wisely.</h2>
+                <% else %>
+                    <h1>Welcome</h1>
+			<% end %>
