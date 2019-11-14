@@ -35,37 +35,71 @@
 		</ul>
 
 		<% if !user_signed_in? %>
-			<p class="sign_in"><%= link_to "Admin Login", new_user_session_path %></p>
+			<p class="sign_in"><%= link_to "Admin Login", new_user_session_path, class: 'btn btn-secondary' %></p>
+			<!--<p class="sign_in"><%= link_to "Admin Login", new_user_session_path %></p>-->
 		<% end %>
 
 
 	</div>
 
-	<div id="main_content">
-		<div id="header">
-			<% if current_page?(root_path) %>
-				<p>Congratulations, you made it to my website</p>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">ILAFIROUZABADI.COM</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  			<% if current_page?(root_path) %>
+			  <button type="button" class="btn btn-outline-warning">Congratulations, you made it to my website</button>
 			<% elsif current_page?(installations_path) %>
-				<p>All Installations</p>
+			  <button type="button" class="btn btn-outline-info">All Installations</button>
 			<% elsif current_page?(about_path) %>
-				<p>About</p>
+			  <button type="button" class="btn btn-outline-success">About</button>
 			<% else %>
-				<%= link_to "Back to All Installations", installations_path %>
+				<%= link_to "Back to All Installations", installations_path, class: 'btn btn-outline-warning' %>
+				
 			<% end %>
+
+
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+
 
 
 			<% if user_signed_in? %>
-				<div class="buttons">
-					<button class="button"><%= link_to "New Installation", new_installation_path %></button>
-					<button class="button"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></button>
-				</div>
+			    <form class="form-inline">
+					<%= link_to "New Installation", new_installation_path, class: 'btn btn-outline-info' %>
+				</form>
+&nbsp;
+			    <form class="form-inline">
+					<%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger')  %>
+				</form>
 			<% end %>
 
 
-		</div>
+
+</nav>
+
+
+
+	<div id="main_content">
 
 		<% flash.each do |name, msg| %>
-			<%= content_tag(:div, msg, class: "alert") %>
+			<%= content_tag(:div, msg, class: "alert alert-dismissible alert-danger") %>
 		<% end %>
 
 		<%= yield %>
