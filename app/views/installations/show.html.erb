@@ -1,34 +1,36 @@
 <div id="installation_content">
 
   <p id="notice"><%= notice %></p>
-
   <p class="title">
-    <strong>Title:</strong>
+    <!--<strong>Title:</strong>-->
     <%= @installation.title %>
   </p>
-
-  <p class="show_image">
-    <strong>Image:</strong>
-    <%= image_tag (@installation.image), style: 'height:200px; width:auto' %>
+  <br>
+  <p class="show_installation_image">
+    <!--<strong>Image:</strong>-->
+    <%= image_tag (@installation.image) %>
   </p>
 
+
+
+
   <p class="description">
-    <strong>Description:</strong>
+    <!--<strong>Description:</strong>-->
     <%= @installation.description %>
   </p>
 
   <p class="credit">
-    <strong>Credit:</strong>
+    <!--<strong>Credit:</strong>-->
     <%= @installation.credit %>
   </p>
 
   <p class="copyright">
-    <strong>Copyright:</strong>
+    <!--<strong>Copyright:</strong>-->
     <%= @installation.copyright %>
   </p>
 
   <p class="date">
-    <strong>Date:</strong>
+    <!--<strong>Date:</strong>-->
     Submitted <%= time_ago_in_words(@installation.created_at) %> ago.
   </p>
 		
@@ -39,13 +41,15 @@
     <%= link_to 'Delete', installation_path(@installation), method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 	
+
+  <br>
 <% if @installation.comments.count > 0 %>
 
 	<div id="comments">
     <% if @installation.comments.count == 1 %>
-      <h2><%= @installation.comments.count %> Addendum</h2>
+      <h4><%= @installation.comments.count %> Addendum</h2>
     <% else %>
-      <h2><%= @installation.comments.count %> Addenda</h2>
+      <h4><%= @installation.comments.count %> Addenda</h2>
     <% end %>
 		<%= render @installation.comments %>
   <% end %>

@@ -15,8 +15,8 @@
  */
 
 
+ @import "bootstrap";
 @import 'normalize';
-@import "bootstrap";
 
 
 html, body {
@@ -66,6 +66,12 @@ a {
 		position: absolute;
 		right: 3em;
 		top: 80%;
+		font-size: .8em;
+	}
+	.sign_in2 {
+		position: absolute;
+		right: 3em;
+		top: 70%;
 		font-size: .8em;
 	}
 }
@@ -121,6 +127,7 @@ a {
 	#installation_content {
 		padding: 1em 3em;
 		.title {
+			color: greenyellow;
 			font-weight: 500;
 			text-decoration: none;
 			font-size: 2.5em;
@@ -131,19 +138,32 @@ a {
 			line-height: 1.75;
 		}
 		.description {
+			color: rgb(113, 121, 224);
 			font-size: 1.1em;
-			line-height: 1.75;
+			line-height: 1.50;
+			font-style: italic;
 		}
 		.credit {
-			font-size: 1.1em;
+			color: salmon;
+			font-size: 0.8em;
 			line-height: 1.75;
 		}
 		.copyright {
-			font-size: 1.1em;
+			color: olivedrab;
+			font-style: italic;
+			font-size: 0.8em;
 			line-height: 1.75;
 		}
 		.date_and_author {
 			margin: .5em 0 2em 0;
+		}
+		.show_installation_image {
+			width: 300px;
+			margin-right: 2em;
+			img {
+				width: 100%;
+				border-radius: 0.35em;
+			}
 		}
 		#comments {
 			h2 {
@@ -220,11 +240,14 @@ a {
 		margin-top: 10px;
 		padding: .5em 1em;
 		line-height: 1.75;
+		color: black;
 	}
 	input[type="text"] {
+		color: black;
 		height: 35px;
 	}
 	textarea {
+		color: black;
 		min-height: 180px;
 	}
 	input[type="submit"] {
