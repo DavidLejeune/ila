@@ -31,6 +31,7 @@ gem 'devise'
 gem 'friendly_id', '~> 5.2.4' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'spring'
 gem 'passenger'
+gem 'bootstrap-sass'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'jquery-rails'
